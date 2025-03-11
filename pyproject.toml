@@ -1,0 +1,20 @@
+[project]
+name = "minesweeper"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Jeremy Da Cruz",email = "jeremy.dacruz2@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest (>=8.3.5,<9.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "minesweeper", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
