@@ -34,7 +34,6 @@ jaraco.functools==4.1.0
 jeepney==0.9.0
 keyring==25.6.0
 mccabe==0.7.0
--e git+ssh://git@github.com/jdc2063/student-challenges-de.git@2bfccd276c16f3c761699cad9ab24d2718d46676#egg=minesweeper&subdirectory=curriculum/02-Soft-Eng-Best-Practices/02-Testing-and-CI-CD/minesweeper
 more-itertools==10.6.0
 msgpack==1.1.0
 mypy-extensions==1.0.0
