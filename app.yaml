@@ -1,0 +1,3 @@
+runtime: python310 # Defines the python runtime
+service: default # The name of the service
+entrypoint: python app/app.py # The entrypoint for the app

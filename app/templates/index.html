@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+    <div class="container">
+        <h1>Minesweeper</h1>
+        <p class="message">{{ message }}</p>
+        <a href="{{ url_for('restart') }}" class="button">Restart Game</a>
+        <table>
+        {% for row_idx in range(board|length) %}
+        <tr>
+            {% for col_idx in range(board[row_idx]|length) %}
+            <td class="{{ 'revealed' if board[row_idx][col_idx] != ' ' else 'hidden' }}">
+            {% if board[row_idx][col_idx] == ' ' %}
+            <a href="{{ url_for('reveal', row=row_idx, col=col_idx) }}">?</a>
+            {% else %}
+            {{ board[row_idx][col_idx] }}
+            {% endif %}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+    </body>
+
+</html>
